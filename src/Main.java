@@ -14,7 +14,7 @@ public class Main {
         database.addUser(new User(3, "roll", "lkjfasd324", "Евгений Зверев"));
         database.addUser(new User(4, "barrel", "asd234jk3", "Григорий Креведко"));
 //        System.out.println(database.toString());
-        System.out.println(database.getUser(2));
+//        System.out.println(database.getUser(2));
         database.getAllUsers();
         System.out.println();
         database.removeUser(1);
