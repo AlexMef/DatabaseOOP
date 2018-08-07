@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Database {
     ArrayList<User> listOfUsers = new ArrayList<>();
@@ -22,9 +23,10 @@ public class Database {
         return listOfUsers.get(index);
     }
 
+
     public void getAllUsers() {
         for (User user : listOfUsers) {
-            System.out.println(user.getID() + "\t" + user.getFullName() + "\t\t\t" + user.getLogin() + "\t\t\t" + user.getPassword());
+            System.out.printf("%d" +  "%10s" + "%10s" + "%15s" + "%15s" + "%15s\n", user.getID(), user.getLogin(), user.getPassword(), user.getFirstName(), user.getSurName(), user.getSecondName());
         }
     }
 
@@ -33,4 +35,16 @@ public class Database {
         index--;
         listOfUsers.remove(index);
     }
-}
+
+    public void removeUserByID(Integer ID) {
+                        Iterator i = listOfUsers.iterator();
+                        while (i.hasNext()) {
+                            User user = (User)i.next();
+                            System.out.println(user.getID());
+                            if (user.getID().equals(ID)) {
+                                System.out.println("remove");
+                                i.remove();
+                }
+            }
+        }
+    }

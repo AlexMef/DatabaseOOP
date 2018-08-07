@@ -1,21 +1,25 @@
 public class User {
-    private int ID;
+    private Integer ID;
     private String login;
     private String password;
-    private String fullName;
+    private String firstName;
+    private String surName;
+    private String secondName;
 
-    public User(int ID, String login, String password, String fullName) {
+    public User(int ID, String login, String password, String firstName, String surName, String secondName) {
         this.ID = ID;
         this.login = login;
         this.password = password;
-        this.fullName = fullName;
+        this.firstName = firstName;
+        this.surName = surName;
+        this.secondName = secondName;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -35,21 +39,27 @@ public class User {
         this.password = password;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "ID=" + ID +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", fullName='" + fullName + '\'' +
-                '}';
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public String getSurName() {
+        return surName;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 }
